@@ -45,7 +45,7 @@ async function postRender(id, element) {
         elPostList.innerHTML = null
         let UserPost = data.filter((post) => post.userId == id)
 
-        data.forEach(post => {
+        UserPost.forEach(post => {
 
 
             console.log(post);
@@ -86,12 +86,12 @@ async function commentRender(id, element) {
         .then(data => data)
         .catch(error => console.log(error))
     console.log(data);
-
     if (data) {
-        let UserPost = data.filter((comment) => comment.postId == id)
+        let UserCommen = data.filter((comment) => comment.userId == id)
+        // let UserPost = data.filter((comment) => comment.postId == id)
         // elPostList.innerHTML = null
 
-        data.forEach(comment => {
+        UserCommen.forEach(comment => {
 
 
             console.log(post);
