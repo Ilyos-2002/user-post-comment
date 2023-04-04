@@ -42,7 +42,7 @@ async function postRender(id, element) {
     console.log(data);
 
     if (data) {
-        elPostList.innerHTML = null
+        // elPostList.innerHTML = null
         let UserPost = data.filter((post) => post.userId == id)
 
         UserPost.forEach(post => {
